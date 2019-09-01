@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="referrer" content="no-referrer"> <!-- don't send HTTP referer for privacy purpose and to use Google Maps Geocoding API without key -->
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h3>Change controls onn Google Maps API</h3>
+    <!--The div element for the map -->
+	<div id="map"></div>
+	<!-- Hide controls until they are moved into the map. -->
+    <div style="display:none">
+			<div class="controls zoom-control">
+			  <button class="zoom-control-in" title="Zoom In" tabindex="-1">+</button>
+			  <button class="zoom-control-out" title="Zoom Out" tabindex="-1">−</button>
+			</div>
+			<div class="controls maptype-control maptype-control-is-map">
+			  <button class="maptype-control-map"
+					  title="Show road map"
+					  tabindex="-1">Map</button>
+			  <button class="maptype-control-satellite"
+					  title="Show satellite imagery"
+					  tabindex="-1">Satellite</button>
+			</div>
+			<div class="controls fullscreen-control">
+			  <button title="Toggle Fullscreen" tabindex="-1">
+				<div class="fullscreen-control-icon fullscreen-control-top-left"></div>
+				<div class="fullscreen-control-icon fullscreen-control-top-right"></div>
+				<div class="fullscreen-control-icon fullscreen-control-bottom-left"></div>
+				<div class="fullscreen-control-icon fullscreen-control-bottom-right"></div>
+			  </button>
+			</div>
+		  </div>
+
+	<script src="app.js"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFP5gI-d4TRbM4a8XTJRJ37O4Ql4OPOJU&callback=initMap">
+	</script>
+</body>
+</html>
+
